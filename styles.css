@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Ek+Mukta:400,300,500,700,800");
+
+body {
+    font-family: 'Ek Mukta', sans-serif;
+    background: #fff59d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.coin {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #d4af37, #e0c072); /* Efecto metálico */
+}
+
+.coin .front,
+.coin .back {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-size: cover;
+}
+
+.coin .front {
+    background-image: url('front.png');
+}
+
+.coin .back {
+    background-image: url('back.png');
+    transform: rotateY(180deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(50, 42, 42);
+    background-color: #f7941e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fbb041;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+span {
+    margin: 0 10px;
+}
